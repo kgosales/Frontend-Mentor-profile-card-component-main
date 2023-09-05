@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --DarkCyan: hsl(185, 75%, 39%);
+    --VeryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+    --DarkGrayishBlue: hsl(227, 10%, 46%);
+    --DarkGray: hsl(0, 0%, 59%);
+    --Font-Name-Stats: 18px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--DarkCyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .bg {
+        width: 50%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        &:nth-of-type(1) {
+            background-image: url(images/bg-pattern-top.svg);
+            background-position: -150px -500px;
+        }
+
+        &:nth-of-type(2) {
+            background-image: url(images/bg-pattern-bottom.svg);
+            background-position: 150px 500px;
+        }
+    }
+}
+
+.card {
+    width: 90%;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+
+    img[alt=pattern] {
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        img[alt=avatar] {
+            border-radius: 50%;
+            border: 10px solid white;
+            position: absolute;
+            top: -58px;
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+
+        .user{
+            text-align: center;
+            padding-top: 75px;
+        }
+
+        hr {
+            width: 100%;
+            height: 1px;
+            background-color: var(--DarkGray);
+            border: none;
+            margin: 30px 0;
+        }
+
+        .stats-container {
+            width: 100%;
+            padding: 0 50px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+
+            .stat{
+                p{
+                    &:nth-child(1){
+                        font-size: var(--Font-Name-Stats);
+                        color: var(--VeryDarkDesaturatedBlue);
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.attribution {
+    width: 100%;
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

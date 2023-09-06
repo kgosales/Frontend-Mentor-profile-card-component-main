@@ -149,6 +149,6 @@ body .bg:nth-of-type(2) {
     background-position: -150px -200px;
   }
   body .bg:nth-of-type(2) {
-    background-position: 10px 200px;
+    background-position: 100px 100px;
   }
 }
